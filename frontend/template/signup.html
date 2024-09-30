@@ -1,0 +1,217 @@
+<html>
+<head>
+  <title>
+    Login Page
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      background-color: #f5f5f5;
+    }
+    .container {
+      display: flex;
+      width: 80%;
+      max-width: 1200px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap; /* Allow wrapping for mobile */
+    }
+    .left {
+      background-color: #00aaff;
+      color: white;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .left img {
+      width: 150px;
+      height: 150px;
+    }
+    .left h2 {
+      margin: 20px 0 10px;
+      font-size: 24px;
+    }
+    .left p {
+      font-size: 16px;
+      text-align: center;
+    }
+    .right {
+      background-color: white;
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .right img {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+    }
+    .right h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .right h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .right input[type="text"], .right input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .right .toggle-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .right .toggle-container label {
+      margin-right: 10px;
+    }
+    .right .toggle-container input[type="checkbox"] {
+      display: none;
+    }
+    .right .toggle-container .toggle {
+      width: 50px;
+      height: 25px;
+      background-color: #ccc;
+      border-radius: 25px;
+      position: relative;
+      cursor: pointer;
+    }
+    .right .toggle-container .toggle:before {
+      content: '';
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      background-color: white;
+      border-radius: 50%;
+      top: 1px;
+      left: 1px;
+      transition: 0.3s;
+    }
+    .right .toggle-container input[type="checkbox"]:checked + .toggle:before {
+      transform: translateX(25px);
+    }
+    .right .toggle-container input[type="checkbox"]:checked + .toggle {
+      background-color: #00aaff;
+    }
+    .right .forgot-password {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .right .forgot-password a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+    .right .login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #00aaff; /* Changed to visible color */
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer; /* Change cursor to pointer */
+    }
+    .right .signup {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .right .signup a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        width: 100%;
+      }
+      .left, .right {
+        flex: none;
+        width: 100%; /* Full width for both sections */
+      }
+      .right img {
+        width: 80px; /* Smaller logo on mobile */
+        top: 10px; /* Adjust position */
+        right: 10px; /* Adjust position */
+      }
+      .left h2, .right h2, .right h3 {
+        font-size: 20px; /* Smaller font size */
+      }
+      .left p, .right input[type="text"], .right input[type="password"] {
+        font-size: 14px; /* Smaller font size */
+      }
+      .right .login-btn {
+        background-color: #00aaff; /* Ensure visibility */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img alt="24/7 Service Icon" height="150" src="../assets/Service Logo.jpg" width="150"/>
+      <h2>
+        Service Request
+      </h2>
+      <p>
+        Get quick resolution to your concern by raising a service request.
+      </p>
+    </div>
+    <div class="right">
+      <img alt="Company Logo" height="100" src="../assets/Academics.jpg" width="100"/>
+      <h2>
+        Sign Up!
+      </h2>
+      <h3>
+        to create a new account
+      </h3>
+      <input placeholder="GMAIL/Mobile No." type="text"/>
+      <input placeholder="Password" type="password"/>
+      <!-- <div class="forgot-password">
+        <a href="#">
+          Forgot Password?
+        </a>
+      </div> -->
+      <div class="toggle-container">
+        <label>
+          Student
+        </label>
+        <input id="toggle" type="checkbox"/>
+        <label class="toggle" for="toggle">
+        </label>
+        <label>
+          Parent
+        </label>
+      </div>
+      <button class="login-btn">
+        signup
+      </button>
+      <div class="signup">
+        <p>
+            Already on Academics? 
+          <a href="#">
+            Login
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
